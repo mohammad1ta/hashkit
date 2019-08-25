@@ -41,6 +41,9 @@ class Utility
      */
     public static function encode( $str ) {
 
+        if ( !$str )
+            $str = md5( rand( 1, 99999999 ) );
+
         // hash
         $key = hash( 'sha256', self::$key );
 
